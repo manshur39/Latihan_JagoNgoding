@@ -56,6 +56,37 @@ else :
  else : 
     print ('\n')
 
+#3 Membuat Program Bilangan Prima
+def is_prime (x):
+    for i in range(2,x):
+        if x % i == 0:
+            return False
+    
+    return True
+
+print (is_prime(2))
+print (is_prime(3))
+print (is_prime(4))
+print (is_prime(5))
+
+#Membuat Fungsi Pencarian Bilangan Prima
+#Fungsi input
+#awal = int(input('masukan angka awal= '))
+#akhir = int (input('masukan angka terakhir= '))
+awal = 1
+akhir = 100
+def cari_bilangan_prima(awal, akhir):
+    list_bilangan_prima= []
+
+    for x in range (awal,akhir +1):
+        if is_prime(x):
+            list_bilangan_prima.append(x)
+    return list_bilangan_prima
+ 
+print (cari_bilangan_prima(awal,akhir))
+
+
+
 
 
 
