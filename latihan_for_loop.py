@@ -85,9 +85,65 @@ def cari_bilangan_prima(awal, akhir):
  
 print (cari_bilangan_prima(awal,akhir))
 
+#4 Program Menghitung Huruf Vokal (Pakai 2 Cara)
+#Cara 1
 
+kalimat = 'saya'
+for huruf in kalimat:
+    print (huruf)
 
+#Dengan Fungsi input
+#teks = input('Tuliskan teks: ').lower()
 
+tulis_teks = 'i love lombok'.lower()
+huruf_vokal = {'a': 0, 'i':0, 'u':0, 'e':0, 'o':0}
 
+total_huruf_vokal = 0
+for karakter in tulis_teks:
+    if karakter in ['a','i','u','e','o']:       
+        huruf_vokal[karakter] += 1 
+        total_huruf_vokal += 1
 
+print('Tulis teks: ',tulis_teks)
+print (f'Total karakter: {len(tulis_teks)}')
+print (f'Total huruf vokal: {total_huruf_vokal}')
+print(f"""\
+    a -> {huruf_vokal['a']}
+    i -> {huruf_vokal['i']}
+    u -> {huruf_vokal['u']}
+    e -> {huruf_vokal['e']}
+    o -> {huruf_vokal['o']}\
+        """)
 
+#Cara 2. Menggunakan Fungsi string.count(), dictionary.keys() dan dictionary.values()
+#Contoh: Ada berapa huruf a dalam kata "Surabaya"?
+print("Surabaya".count('a'))
+#ada berapa teks "ta" pada string rata-rata?
+print("rata-rata".count("ta"))
+#>>> Inti
+#dengan fungsi input
+#teks= input('Masukan Teks: ').lower()
+
+teks = 'Indonesia'.lower()
+dictionary_huruf_vokal = {
+    'a': 0,
+    'i': 0,
+    'u': 0,
+    'e': 0,
+    'o': 0
+}
+
+for huruf_vokal in dictionary_huruf_vokal.keys():
+    dictionary_huruf_vokal[huruf_vokal] = teks.count(huruf_vokal)
+
+jumlah_huruf_vokal = sum(dictionary_huruf_vokal.values())
+print ('Masukan teks: ',teks)
+print (f'Jumlah karakter: {len(teks)}')
+print (f'Jumlah huruf vokal: {jumlah_huruf_vokal}')
+print(f"""\
+    a -> {dictionary_huruf_vokal['a']}
+    i -> {dictionary_huruf_vokal['i']}
+    u -> {dictionary_huruf_vokal['u']}
+    e -> {dictionary_huruf_vokal['e']}
+    o -> {dictionary_huruf_vokal['o']}\
+    """)
