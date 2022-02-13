@@ -147,3 +147,42 @@ print(f"""\
     e -> {dictionary_huruf_vokal['e']}
     o -> {dictionary_huruf_vokal['o']}\
     """)
+print('\n')
+
+#5. 4 Cara Menghitung Perpangkatan
+#Cara 1: Operator pangkat
+
+hasil = 2 ** 5
+print(f'hasil = {hasil}')
+
+#Cara 2: Fungsi pow() bawaan python
+bilangan1 = 10
+pangkat1 = 3
+hasil = pow(bilangan1,pangkat1)
+print(f'hasil= {hasil}')
+
+#Cara 3: Perulangan for
+masukanBilangan = 3
+masukanPangkat=3
+hasilPangkat = masukanBilangan
+
+for i in range (masukanPangkat -1):
+    hasilPangkat *= masukanBilangan
+
+print(f'Hasilnya adalah: {hasilPangkat}')
+
+#Cara 4: Perulangan Rekursif
+
+bilangan = 4
+pangkat = 3
+
+def hitung_pangkat(bilangan, pangkat):
+    if pangkat >1 :
+        return bilangan * hitung_pangkat (bilangan, pangkat -1)
+    
+    return bilangan
+
+hasil = hitung_pangkat(bilangan,pangkat)
+print(f'hasil= {hasil}')
+
+
