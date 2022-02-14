@@ -6,6 +6,9 @@
 #kedua = int(input('masukan angka kedua: ')) #angka kedua bilangan fibonacci dimulai dari angka 1
 #jumlah_deret = int(input('masukan jumlah suku deret fibonacci: '))
 
+from weakref import WeakValueDictionary
+
+
 pertama = 0
 kedua = 1
 panjang_deret = 7
@@ -173,7 +176,7 @@ print(f'Hasilnya adalah: {hasilPangkat}')
 
 #Cara 4: Perulangan Rekursif
 
-bilangan = 4
+bilangan = 2
 pangkat = 3
 
 def hitung_pangkat(bilangan, pangkat):
@@ -184,5 +187,24 @@ def hitung_pangkat(bilangan, pangkat):
 
 hasil = hitung_pangkat(bilangan,pangkat)
 print(f'hasil= {hasil}')
+print ('\n')
 
+#6. Prigrim Mingibih Hirif Vikil
+test= 'jakarta'.replace('a', '#')
+print(test)
+tulis_kalimat = 'indonesia'
+pengganti =  'e'
+tulis_kalimat = tulis_kalimat.replace('a', pengganti)
+tulis_kalimat = tulis_kalimat.replace('i', pengganti)
+tulis_kalimat = tulis_kalimat.replace('u', pengganti)
+tulis_kalimat = tulis_kalimat.replace('e', pengganti)
+tulis_kalimat = tulis_kalimat.replace('o', pengganti)
+print (tulis_kalimat)
 
+#Menggunakan perulangan for
+tulis_kalimat2 = 'wakanda bere ciao'
+pengganti2 = 'o'
+for huruf in 'aiueo':
+    tulis_kalimat2 = tulis_kalimat2.replace(huruf, pengganti2)
+
+print(tulis_kalimat2)
